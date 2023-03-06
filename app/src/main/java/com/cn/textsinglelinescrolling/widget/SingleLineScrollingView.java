@@ -31,9 +31,22 @@ import java.util.List;
  */
 public class SingleLineScrollingView extends LinearLayout {
     /**
-     *
+     * 文字滚动的速度，每隔8毫秒 走1像素
      */
-    private int milliSeconds = 8;
+    private final int milliSeconds = 8;
+    /**
+     * 切换数据时间间隔，这里为5s
+     */
+    private final int dataMilliSeconds = 5000;
+    /**
+     * 重新设置数据后多久开始滚动，这里为1.5s
+     */
+    private final int dataStartScrollingMilliSeconds = 1500;
+    /**
+     * 该控件加载后多久开始滚动，这里为3s
+     */
+    private final int startScrollingMilliSeconds = 3000;
+
     private RxTimer rxTimer1 = new RxTimer();
     private RxTimer rxTimer2 = new RxTimer();
     private RxTimer rxTimer3 = new RxTimer();
@@ -142,7 +155,7 @@ public class SingleLineScrollingView extends LinearLayout {
             scrollEnd1 = false;
             scrollEnd2 = false;
             scrollEnd3 = false;
-            rxTimerA.timer(5000, number -> {
+            rxTimerA.timer(dataMilliSeconds, number -> {
                 resetTextValue();
                 resetValueAndTimers();
             });
@@ -181,7 +194,7 @@ public class SingleLineScrollingView extends LinearLayout {
         scrollEnd3 = false;
 
         resetTextValue();
-        rxTimerB.timer(3000, number -> {
+        rxTimerB.timer(startScrollingMilliSeconds, number -> {
             setTimer1();
             setTimer2();
             setTimer3();
@@ -251,7 +264,7 @@ public class SingleLineScrollingView extends LinearLayout {
         mScrollX1 = 0;
         mScrollX2 = 0;
         mScrollX3 = 0;
-        rxTimerB.timer(1500, number -> {
+        rxTimerB.timer(dataStartScrollingMilliSeconds, number -> {
             setTimer1();
             setTimer2();
             setTimer3();
