@@ -2,7 +2,7 @@
 ### 效果图:
 ![](https://github.com/cying112115/TextSinglelinesScrolling/blob/main/images/Video_20230306_102737_970.gif)
 
-### 此demo需求的是这样:
+### 此demo的需求是这样:
 + 仿照澎湃新闻客户端的置顶新闻实现滚动效果；
 
 + 每行文字滚动到最后停止，不再继续滚动；
