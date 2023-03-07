@@ -23,3 +23,5 @@
 #### 代码逻辑通俗易懂！有需要的同学可以根据源码自定义需求，欢迎star~，有不合理之处请提出指教！
 
 demo地址：[TextSinglelinesScrolling](https://github.com/cying112115/TextSinglelinesScrolling/)
+
+转载或发文记得备注Github出处：[https://github.com/cying112115/TextSinglelinesScrolling](https://github.com/cying112115/TextSinglelinesScrolling)
