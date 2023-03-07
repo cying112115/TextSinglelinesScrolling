@@ -1,7 +1,6 @@
 ## 简单实现澎湃客户端置顶新闻文字滚动效果
 ### 效果图:
-
-
+![](https://github.com/cying112115/TextSinglelinesScrolling/blob/main/images/Video_20230306_102737_970.gif)
 
 ### 此demo需求的是这样:
 + 仿照澎湃新闻客户端的置顶新闻实现滚动效果；
@@ -15,12 +14,12 @@
 + 点击item跳转详情
 
 ### 实现思路:
-+ HorizontalScrollView实现滚动（TextView控件自带跑马灯效果不能达到需求的效果）；
++ 使用HorizontalScrollView实现横向滚动（TextView控件自带跑马灯效果不能达到需求的效果）；
 
-+ 基于RxJava实现轮询定时器和任务执行器；
++ 基于RxJava3实现轮询定时器和任务执行器；
 
++ 自定义View `SingleLineScrollingView`；
 
-
-#### 代码逻辑通俗易懂！有需要的同学可以根据源码自定义需求，欢迎star~
+#### 代码逻辑通俗易懂！有需要的同学可以根据源码自定义需求，欢迎star~，有不合理之处请提出指教！
 
 demo地址：[TextSinglelinesScrolling](https://github.com/cying112115/TextSinglelinesScrolling/)
